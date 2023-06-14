@@ -24,7 +24,7 @@ public class Program {
 			System.out.println(l);
 		}
 		
-		System.out.println("\n > Insert <\n");
+		System.out.println("\n > FindAll <");
 		
 		
 		list = sellerDao.findAll();
@@ -33,10 +33,20 @@ public class Program {
 			System.out.println(l);
 		}
 		
-		System.out.println("\n > FindAll <");
-		Seller newSeller = new Seller(null, "maicon", "example@email.com", new Date(), 600.0, department);
+		System.out.println("\n > Insert <");
+		Seller newSeller = new Seller(null, "Juarez", "example@email.com", new Date(), 600.0, department);
 		sellerDao.insert(newSeller);
 		System.out.println("Inserted new ID = " + newSeller.getId());
+	
+		System.out.println("\n Update");
+		
+		seller = sellerDao.findById(1);
+	//	seller.setName("Carlos Browm");
+	//	sellerDao.update(seller);
+		System.out.println("Update Success");
+		
+		System.out.println("\n Delete ");
+		sellerDao.deleteById(15);
+		System.out.println("DELETED!");
 	}
-
 }
