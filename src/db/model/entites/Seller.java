@@ -7,16 +7,16 @@ public class Seller {
 	private Integer id;
 	private String name;
 	private String email;
-	private double baseSalary;
 	private Date birthDate;
+	private double baseSalary;
 	private Department department;
 	
-	public Seller(Integer id, String name, String email, double baseSalary, Date birthDate, Department department) {
+	public Seller(Integer id, String name, String email, Date birthDate, double baseSalary, Department department) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
-		this.baseSalary = baseSalary;
 		this.birthDate = birthDate;
+		this.baseSalary = baseSalary;
 		this.department = department;
 	}
 
