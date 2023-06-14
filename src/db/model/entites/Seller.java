@@ -7,17 +7,15 @@ public class Seller {
 	private Integer id;
 	private String name;
 	private String email;
+	private double baseSalary;
 	private Date birthDate;
 	private Department department;
 	
-	public Seller() {
-		
-	}
-
-	public Seller(Integer id, String name, String email, Date birthDate, Department department) {
+	public Seller(Integer id, String name, String email, double baseSalary, Date birthDate, Department department) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
+		this.baseSalary = baseSalary;
 		this.birthDate = birthDate;
 		this.department = department;
 	}
@@ -48,6 +46,18 @@ public class Seller {
 		this.email = email;
 	}
 
+	public double getBaseSalary() {
+		return baseSalary;
+	}
+
+	public void setBaseSalary(double baseSalary) {
+		baseSalary = baseSalary;
+	}
+	
+	public Seller() {
+		
+	}
+	
 	public Date getBirthDate() {
 		return birthDate;
 	}
@@ -82,7 +92,7 @@ public class Seller {
 
 	@Override
 	public String toString() {
-		return "Seller [id: " + id + ", name: " + name + ", email: " + email + 
+		return "Seller [id: " + id + ", name: " + name + ", email: " + email + ", salary: " + baseSalary +
 						", birthDate: " + birthDate + ", department: " + department + "]";
 	}
 	
