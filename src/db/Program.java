@@ -14,10 +14,19 @@ public class Program {
 		Seller seller = sellerDao.findById(3);
 		System.out.println(seller);
 		
-		System.out.println(" ");
+		System.out.println("\n > FindBydDepartment < ");
 		
 		Department department = new Department(4, null);
 		List<Seller> list = sellerDao.findByDepartment(department);
+		
+		for(Seller l : list) {
+			System.out.println(l);
+		}
+		
+		System.out.println("\n > FindAll <");
+		
+		
+		list = sellerDao.findAll();
 		
 		for(Seller l : list) {
 			System.out.println(l);
